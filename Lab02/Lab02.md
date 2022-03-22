@@ -21,7 +21,7 @@ Escribimos el código para desplegar una VM Linux (y todo lo que necesite la VM 
 
 ### Lanzamos los comandos Terraform y observamos las salidas de los diferentes pasos.
 
-- *$ terraform fmt* (opcional, podemos probar el comando de formateo de código de Terraform)
+- *$ terraform fmt*
 - *$ terraform init*
 - *$ terraform validate*
 - *$ terraform plan*

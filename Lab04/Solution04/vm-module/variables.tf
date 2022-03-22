@@ -1,31 +1,28 @@
-# Service Principal Variables
-
-variable "client_id" {
-    description =   "Client ID (APP ID) of the application"
-    type        =   string
-}
-
-variable "client_secret" {
-    description =   "Client Secret (Password) of the application"
-    type        =   string
-}
-
-variable "subscription_id" {
-    description =   "Subscription ID"
-    type        =   string
-}
-
-variable "tenant_id" {
-    description =   "Tenant ID"
-    type        =   string
-}
 
 # Prefix and Tags
 
 variable "prefix" {
     description =   "Prefix to append to all resource names"
     type        =   string
-    default     =   "toki"
+    default     =   ""
+}
+
+variable "rsg_name" {
+    description =   "Name of the Resource group"
+    type        =   string
+    default     =   ""
+}
+
+variable "vnet_name" {
+    description =   "Name of the Virtual Netowrk"
+    type        =   string
+    default     =   ""
+}
+
+variable "subnet_name" {
+    description =   "Name of the Subnet"
+    type        =   string
+    default     =   ""
 }
 
 variable "tags" {
@@ -36,28 +33,6 @@ variable "tags" {
     }
 }
 
-# Resource Group
-
-variable "location" {
-    description =   "Location of the resource group"
-    type        =   string
-    default     =   "westeurope"
-}
-
-# Vnet and Subnet
-
-variable "vnet_address_range" {
-    description =   "IP Range of the virtual network"
-    type        =   string
-    default     =   "10.0.0.0/16"
-}
-
-variable "subnet_address_range" {
-    description =   "IP Range of the virtual network"
-    type        =   string
-    default     =   "10.0.1.0/24"
-}
-
 # Public IP and NIC Allocation Method
 
 variable "allocation_method" {
@@ -66,8 +41,13 @@ variable "allocation_method" {
     default     =   ["Static", "Dynamic"]
 }
 
-
 # VM 
+
+variable "name" {
+    description =   "Name of the VM"
+    type        =   string
+    default     =   "linuxvm"
+}
 
 variable "virtual_machine_size" {
     description =   "Size of the VM"
@@ -78,7 +58,7 @@ variable "virtual_machine_size" {
 variable "computer_name" {
     description =   "Computer name"
     type        =   string
-    default     =   "Linuxvm"
+    default     =   "linuxvm"
 }
 
 variable "admin_username" {

@@ -56,14 +56,3 @@ resource "azurerm_subnet_network_security_group_association" "subnet-nsg" {
 }
 
 
-#
-# - Public IP (To Login to Linux VM)
-#
-
-resource "azurerm_public_ip" "pip" {
-    name                            =     "${var.prefix}-linuxvm-public-ip"
-    resource_group_name             =     azurerm_resource_group.rg.name
-    location                        =     azurerm_resource_group.rg.location
-    allocation_method               =     var.allocation_method[0]
-    tags                            =     var.tags
-}

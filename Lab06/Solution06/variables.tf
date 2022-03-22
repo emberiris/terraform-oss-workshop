@@ -2,28 +2,6 @@
 #*      Creando una subnet en Azure - Variables      *#
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 
-# Service Principal Variables (Again, the bad way!)
-
-variable "client_id" {
-    description =   "Client ID (APP ID) del SPN"
-    type        =   string
-}
-
-variable "client_secret" {
-    description =   "Client Secret (Password) del SPN"
-    type        =   string
-}
-
-variable "subscription_id" {
-    description =   "Subscription ID"
-    type        =   string
-}
-
-variable "tenant_id" {
-    description =   "Tenant ID"
-    type        =   string
-}
-
 # Resource Group Variables
 
 variable "resource_group_name" {

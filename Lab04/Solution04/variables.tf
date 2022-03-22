@@ -20,12 +20,13 @@ variable "tenant_id" {
     type        =   string
 }
 
+
 # Prefix and Tags
 
 variable "prefix" {
     description =   "Prefix to append to all resource names"
     type        =   string
-    default     =   "toki-"
+    default     =   "toki"
 }
 
 variable "tags" {
@@ -41,7 +42,7 @@ variable "tags" {
 variable "location" {
     description =   "Location of the resource group"
     type        =   string
-    default     =   "eu-west"
+    default     =   "westeurope"
 }
 
 # Vnet and Subnet
@@ -58,65 +59,4 @@ variable "subnet_address_range" {
     default     =   "10.0.1.0/24"
 }
 
-# Public IP and NIC Allocation Method
 
-variable "allocation_method" {
-    description =   "Allocation method for Public IP Address and NIC Private ip address"
-    type        =   list(string)
-    default     =   ["Static", "Dynamic"]
-}
-
-
-# VM 
-
-variable "virtual_machine_size" {
-    description =   "Size of the VM"
-    type        =   string
-    default     =   "Standard_B1s"
-}
-
-variable "computer_name" {
-    description =   "Computer name"
-    type        =   string
-    default     =   "Linuxvm"
-}
-
-variable "admin_username" {
-    description =   "Username to login to the VM"
-    type        =   string
-    default     =   "linuxadmin"
-}
-
-variable "admin_password" {
-    description =   "Password to login to the VM"
-    type        =   string
-    default     =   "P@$$w0rD2022*" 
-}
-
-variable "os_disk_caching" {
-    default     =       "ReadWrite"
-}
-
-variable "os_disk_storage_account_type" {
-    default     =       "StandardSSD_LRS"
-}
-
-variable "os_disk_size_gb" {
-    default     =       64
-}
-
-variable "publisher" {
-    default     =       "Canonical"
-}
-
-variable "offer" {
-    default     =       "UbuntuServer"
-}
-
-variable "sku" {
-    default     =       "16.04-LTS"
-}
-
-variable "vm_image_version" {
-    default     =       "latest"
-}

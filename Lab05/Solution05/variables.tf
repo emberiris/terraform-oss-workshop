@@ -29,7 +29,7 @@ variable "tenant_id" {
 variable "resource_group_name" {
     description =   "Nombre del RSG"
     type        =   string
-    default     =   "TokiotaWorkshop-RSG"
+    default     =   "Collabnix-RG"
 }
 
 variable "location" {

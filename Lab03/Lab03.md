@@ -11,7 +11,7 @@ Escribimos código con diferentes expresiones de control para desplegar 2 VM Lin
 - main.tf
 - variables.tf
 - outputs.tf - Necesitara cambios para mostrarnos todas las outputs que tendrá ahora. (Funciones For o Splat)
-- vm.tf - Editamos para crear una segunda máquina iterando. (Diferentes nombres, subnets, bloque dynamic sobre storage_os_disk, etc...)
+- vm.tf - Editamos para crear una segunda máquina iterando. (Diferentes nombres, subnets, etc...)
 - network.tf - Editamos para crear otra subnet directamente desde el bloquVnet Iterando.
 
  **Recuerda tenera mano siempre la documentación del registry de Terraform que vayas a desplegar**
